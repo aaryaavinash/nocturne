@@ -1,8 +1,10 @@
+import './tailwind.css';
 import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
 import { Assets, sampleSurface, firstMesh } from '../../src/core/assets.js';
 import { Pointer } from '../../src/core/input.js';
 import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+import { preloader, cursor, magnetic } from '../../src/core/ui.js';
 import { PlanarReflection } from '../../src/core/reflector.js';
 import { createBottle, DIM } from './bottle.js';
 import { createFloor } from './floor.js';
@@ -594,7 +596,7 @@ document.querySelectorAll('.add').forEach(b => b.addEventListener('click', () =>
 }));
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-worldNav('nocturne', { theme: 'dark', corner: 'bl' });
+// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('nocturne', { theme: 'dark', corner: 'bl' });
 magnetic();
 smoothScroll({ lerp: 0.08 });
 reveal('.house h2, .shop h2', { type: 'lines', stagger: 0.1 });
