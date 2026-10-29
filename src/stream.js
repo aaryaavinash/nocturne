@@ -1,7 +1,7 @@
 // Golden particle streams: a note's surface burns away point by point and each point flies, on its own curve,
 // around the flacon and into the liquid surface. One draw call per note; everything is computed in the vertex shader
 // from a single progress uniform, so it can play forwards and backwards.
-import { THREE } from '../../src/core/engine.js';
+import { THREE } from './core/engine.js';
 
 export const BURN_GLSL = /* glsl */`
   float burnNoise(vec3 p){

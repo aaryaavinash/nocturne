@@ -1,7 +1,7 @@
 {
   "name": "nocturne",
   "private": true,
-  "description": "Standalone Nocturne world from Dioramas.",
+  "description": "A fragrance-house concept from Grasse built around one extrait de parfum.",
   "license": "MIT",
   "version": "0.1.0",
   "type": "module",

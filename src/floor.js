@@ -1,7 +1,7 @@
 // Polished Nero Marquina floor: baked veined albedo + roughness, planar reflection, and the flacon's footprint:
 // a contact shadow, a bright rim where the thick base focuses light, and an amber caustic pool that follows the liquid.
-import { THREE } from '../../src/core/engine.js';
-import { bakeTexture } from '../../src/core/textures.js';
+import { THREE } from './core/engine.js';
+import { bakeTexture } from './core/textures.js';
 
 export function createFloor(renderer, reflection) {
   const albedo = bakeTexture(renderer, 2048, `

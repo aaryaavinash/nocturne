@@ -8,7 +8,7 @@
 //  - Shader: fragments above the plane are discarded; back faces that survive are shaded as the free surface
 //    (classic "liquid in a bottle" trick). The body refracts a half-res render of the scene behind it and absorbs
 //    it with Beer–Lambert amber, so the letters and the floor are visible through the perfume.
-import { THREE, clamp, lerp } from '../../src/core/engine.js';
+import { THREE, clamp, lerp } from './core/engine.js';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 

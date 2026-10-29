@@ -1,9 +1,9 @@
-# 18 · Nocturne — "A fragrance you can pour"
+# Nocturne — "A fragrance you can pour"
 Brand: **Nocturne** — an extrait de parfum ("No. 9, Iris & Oud") from a small Grasse house.
 
 ## Signature interaction
 A heavy faceted glass flacon (procedural: bevelled box or faceted lathe; MeshPhysicalMaterial transmission, thickness, ior 1.5,
-dispersion, attenuation colour) with the cap `models/nocturne/cap.glb`, **full of amber liquid that behaves like liquid**: drag
+dispersion, attenuation colour) with the cap `models/cap.glb`, **full of amber liquid that behaves like liquid**: drag
 to tilt/rotate the bottle; the liquid surface stays level in world space and sloshes with a damped spring wobble driven by
 angular velocity (classic liquid shader: discard above a world-space plane with wobble; back faces drawn as the liquid top;
 fresnel rim/meniscus). Caustic light pools on the black marble floor. **Scroll: the notes arrive** — iris (`iris.glb`),

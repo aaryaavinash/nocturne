@@ -1,0 +1,22 @@
+// ORIGINAL (preserved, not deleted — disabled by comment): previous nested paths
+// import { THREE, clamp, lerp } from '../../src/core/engine.js';
+// import { THREE } from '../../src/core/engine.js';
+// import { THREE } from '../../src/core/engine.js';
+// import { bakeTexture } from '../../src/core/textures.js';
+// import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
+// import { Assets, sampleSurface, firstMesh } from '../../src/core/assets.js';
+// import { Pointer } from '../../src/core/input.js';
+// import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+// import { PlanarReflection } from '../../src/core/reflector.js';
+//   { key: 'bergamot', file: 'models/nocturne/bergamot.glb', size: 1.05, axis: 'max', yaw: -30, pitch: 8 },
+//   { key: 'iris', file: 'models/nocturne/iris.glb', size: 1.45, axis: 'y', yaw: 20, pitch: 0 },
+//   { key: 'vanilla', file: 'models/nocturne/vanilla.glb', size: 1.2, axis: 'max', yaw: 70, pitch: 10 },
+//   { key: 'oud', file: 'models/nocturne/oud.glb', size: 1.15, axis: 'max', yaw: -25, pitch: 0 },
+// const capLoad = assets.gltf('models/nocturne/cap.glb').then(g => {
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('nocturne', { theme: 'dark', corner: 'bl' });
+//   <link rel="stylesheet" href="./examples/nocturne/style.css">
+//   <script type="module" src="./examples/nocturne/main.js"></script>
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from './core/ui.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('nocturne', { theme: 'dark', corner: 'bl' });

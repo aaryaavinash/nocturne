@@ -1,11 +1,10 @@
 import './tailwind.css';
-import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
-import { Assets, sampleSurface, firstMesh } from '../../src/core/assets.js';
-import { Pointer } from '../../src/core/input.js';
-import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
-import { preloader, cursor, magnetic } from '../../src/core/ui.js';
-import { PlanarReflection } from '../../src/core/reflector.js';
+import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from './core/engine.js';
+import { Assets, sampleSurface, firstMesh } from './core/assets.js';
+import { Pointer } from './core/input.js';
+import { smoothScroll, gsap, reveal } from './core/scroll.js';
+import { preloader, cursor, magnetic } from './core/ui.js';
+import { PlanarReflection } from './core/reflector.js';
 import { createBottle, DIM } from './bottle.js';
 import { createFloor } from './floor.js';
 import { createStream, burnKey, BURN_GLSL, BURN_A, BURN_B, DUR } from './stream.js';
@@ -159,10 +158,10 @@ engine.onResize((w, h, dpr) => bgRT.setSize(Math.round(w * dpr * 0.5), Math.roun
 
 // ─── Notes ─────────────────────────────────────────────────────────────────────
 const NOTES = [
-  { key: 'bergamot', file: 'models/nocturne/bergamot.glb', size: 1.05, axis: 'max', yaw: -30, pitch: 8 },
-  { key: 'iris', file: 'models/nocturne/iris.glb', size: 1.45, axis: 'y', yaw: 20, pitch: 0 },
-  { key: 'vanilla', file: 'models/nocturne/vanilla.glb', size: 1.2, axis: 'max', yaw: 70, pitch: 10 },
-  { key: 'oud', file: 'models/nocturne/oud.glb', size: 1.15, axis: 'max', yaw: -25, pitch: 0 },
+  { key: 'bergamot', file: 'models/bergamot.glb', size: 1.05, axis: 'max', yaw: -30, pitch: 8 },
+  { key: 'iris', file: 'models/iris.glb', size: 1.45, axis: 'y', yaw: 20, pitch: 0 },
+  { key: 'vanilla', file: 'models/vanilla.glb', size: 1.2, axis: 'max', yaw: 70, pitch: 10 },
+  { key: 'oud', file: 'models/oud.glb', size: 1.15, axis: 'max', yaw: -25, pitch: 0 },
 ];
 
 // Scroll stops: camera orbit around the flacon, where the flacon sits on screen (lx, ly in NDC) and where the note floats.
@@ -205,7 +204,7 @@ const noteLoads = notes.map(n => assets.gltf(n.file).then(g => {
 }).catch(e => console.warn('note missing', n.key, e.message)));
 
 let capModel = null;
-const capLoad = assets.gltf('models/nocturne/cap.glb').then(g => {
+const capLoad = assets.gltf('models/cap.glb').then(g => {
   const m = g.scene;
   normalize(m, 0.6, { axis: 'y' });
   prepModel(m, renderer, { env: 1.9, onMat: mat => {
@@ -596,7 +595,6 @@ document.querySelectorAll('.add').forEach(b => b.addEventListener('click', () =>
 }));
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('nocturne', { theme: 'dark', corner: 'bl' });
 magnetic();
 smoothScroll({ lerp: 0.08 });
 reveal('.house h2, .shop h2', { type: 'lines', stagger: 0.1 });
